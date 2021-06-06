@@ -1,0 +1,6 @@
+A mouse is an example of... :Hardware
+Hardware,Software,Data,Process
+What is the purpose of the CPU? :To process data
+To process data,To count your money,To store data,To start the computer
+What is the connection between Windows, macOS, Ubuntu and Android? :Operating systems
+Operating systems,Chocolate bars,Software,Computer systems

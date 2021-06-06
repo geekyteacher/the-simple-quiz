@@ -1,0 +1,39 @@
+sql
+
+count records
+get num of questions
+
+output 
+
+
+
+
+Questions
+----------------
+ID
+question
+//correctAnswer
+
+
+Answers
+----------------
+ID      int 
+Q_ID    int
+Answer  text
+correct bool
+
+
+Players
+-----------------
+
+
+Scores
+-----------------
+
+
+
+
+===================
+V0.4
+Random question order - get question ids shuffle list, get question Id for query
+Admin - add question   
