@@ -21,7 +21,6 @@ except ImportError:
 '''
 Create a 'local_settings.py'
 Add these variables and assigne values
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'your-key-here'
 
@@ -47,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'quiz.apps.QuizConfig',
+    'quiz',
 ]
 
 MIDDLEWARE = [
