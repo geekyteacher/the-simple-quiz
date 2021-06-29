@@ -15,9 +15,9 @@ def quizHome(request):
 #     output = ', '.join([q.questionText for q in latest_question_list])
 #     return HttpResponse(output)
 
-def index(request):
+def showQuestion(request):
     latest_question_list = Question.objects.order_by('id')[:5]
-    template = loader.get_template('quiz/index.html')
+    template = loader.get_template('quiz/questions.html')
     context = {
         'latest_question_list': latest_question_list,
     }
