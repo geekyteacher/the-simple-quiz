@@ -8,7 +8,15 @@ from .models import Question
 #     return HttpResponse("Testing...1..2..3")
 
 def quizHome(request):
-    return HttpResponse("QUIZ --- Testing...1..2..3")
+    template = loader.get_template('quiz/index.html')
+    question_list = Question.objects.order_by('id')
+
+    request.session['question_list'] = question_list
+
+    context = {
+        'question_list': question_list,
+    }
+    return HttpResponse(template.render(context, request))
 
 # def index(request):
 #     latest_question_list = Question.objects.order_by('id')[:5]
@@ -16,9 +24,9 @@ def quizHome(request):
 #     return HttpResponse(output)
 
 def showQuestion(request):
-    latest_question_list = Question.objects.order_by('id')[:5]
+    question_list = request.session['question_list']
     template = loader.get_template('quiz/questions.html')
     context = {
-        'latest_question_list': latest_question_list,
+        'question_list': question_list,
     }
     return HttpResponse(template.render(context, request))
